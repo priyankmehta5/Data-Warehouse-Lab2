@@ -1,0 +1,27 @@
+build_mau:
+  outputs:
+    dev:
+      account: test
+      database: USER_DB_GROUNDHOG
+      password: test
+      role: TRAINING_ROLE
+      schema: ANALYTICS
+      threads: 1
+      type: snowflake
+      user: GROUNDHOG
+      warehouse: GROUNDHOG_QUERY_WH
+  target: dev
+
+weather_analytics:
+  outputs:
+    dev:
+      account: test
+      database: USER_DB_GROUNDHOG
+      password: test
+      role: TRAINING_ROLE
+      schema: ANALYTICS
+      threads: 4
+      type: snowflake
+      user: GROUNDHOG
+      warehouse: GROUNDHOG_QUERY_WH
+  target: dev

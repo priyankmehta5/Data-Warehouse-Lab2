@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_weather_final
+    description: Clean staging model built from WEATHER_FINAL
+    columns:
+      - name: event_ts_utc
+        tests:
+          - not_null
+
+      - name: event_date
+        tests:
+          - not_null
+
+      - name: lat
+        tests:
+          - not_null
+
+      - name: lon
+        tests:
+          - not_null
+
+      - name: record_type
+        tests:
+          - not_null

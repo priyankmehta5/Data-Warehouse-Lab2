@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: weather_daily_summary
+    description: Daily summary of actual and forecast temperatures
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+
+      - name: lat
+        tests:
+          - not_null
+
+      - name: lon
+        tests:
+          - not_null
+
+  - name: weather_temp_trends
+    description: Trend model with forecast error and 7-day moving average
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+
+      - name: lat
+        tests:
+          - not_null
+
+      - name: lon
+        tests:
+          - not_null
+
+  - name: weather_location_summary
+    description: Location-level summary for dashboard comparison
+    columns:
+      - name: lat
+        tests:
+          - not_null
+
+      - name: lon
+        tests:
+          - not_null
